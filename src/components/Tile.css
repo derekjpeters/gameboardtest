@@ -1,0 +1,20 @@
+/* Styles for individual tiles */
+.tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: #0078d7; /* Tile background color */
+    color: white; /* Tile text color */
+    font-size: 24px;
+    cursor: pointer; /* Show a pointer cursor on hover */
+    user-select: none; /* Disable text selection */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .tile:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+  }
+  

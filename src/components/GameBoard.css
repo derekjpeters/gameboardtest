@@ -1,0 +1,9 @@
+/* Styles for the game board */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* Create a grid with 3 columns */
+    grid-gap: 5px; /* Add spacing between tiles */
+    justify-content: center;
+    margin: 20px auto;
+  }
+  

@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js: Main component that holds the game
+import React from 'react';
+import './App.css'; // Import app-wide styles
+import GameBoard from './components/GameBoard'; // Import the GameBoard component
 
+// Main App Component
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* Title of the game */}
+      <h1>Tile Puzzle Game</h1>
+      {/* Render the GameBoard component and pass gridSize as a prop */}
+      <GameBoard gridSize={3} />
     </div>
   );
 }
