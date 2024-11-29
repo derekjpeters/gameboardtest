@@ -1,194 +1,70 @@
-Tile Puzzle Game Documentation
-==============================
+# Getting Started with Create React App
 
-Overview
---------
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The **Tile Puzzle Game** is a fun and interactive project built using React. Players rearrange shuffled tiles on a grid to restore the original sequential order. This game helps students learn core React concepts, including components, props, state management, and event handling, in an engaging and practical way.
+## Available Scripts
 
-* * * * *
+In the project directory, you can run:
 
-Features
---------
+### `npm start`
 
--   **Dynamic Grid**: The game grid adjusts based on the number of tiles (default: 3x3).
--   **Interactive Gameplay**: Players can swap tiles to arrange them in the correct order.
--   **Win Detection**: The game recognizes when the puzzle is solved and displays a congratulatory message.
--   **React Fundamentals**: Includes usage of `useState`, `useEffect`, and props to manage the game logic and UI.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-* * * * *
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Learning Objectives
--------------------
+### `npm test`
 
-By completing this project, students will:
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
--   Understand React components and how to compose them.
--   Manage state using the `useState` hook.
--   Use the `useEffect` hook for side effects like initialization.
--   Implement event handlers to manage user interactions.
--   Style components using modular CSS.
+### `npm run build`
 
-* * * * *
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-File Structure
---------------
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-scss
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Copy code
+### `npm run eject`
 
-`tile-puzzle/
-├── src/
-│   ├── components/
-│   │   ├── GameBoard.js      // Manages the puzzle grid and game logic
-│   │   ├── Tile.js           // Represents an individual tile
-│   ├── App.js                // Main entry point for the app
-│   ├── App.css               // Global styles for the app
-│   ├── index.js              // Entry point for rendering the app
-│   ├── index.css             // Global reset and basic styles`
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-* * * * *
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-How to Play
------------
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-1.  **Start the Game**: The grid of tiles will be shuffled automatically when the game loads.
-2.  **Rearrange Tiles**: Click a tile to swap it with the next tile in the sequence.
-3.  **Win the Game**: Arrange all tiles in sequential order (e.g., 1, 2, 3, ...).
-4.  **Victory Message**: Once solved, a congratulatory message will appear.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-* * * * *
+## Learn More
 
-Setup and Installation
-----------------------
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-1.  Clone the repository:
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-    bash
+### Code Splitting
 
-    Copy code
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-    `git clone https://github.com/your-username/tile-puzzle.git`
+### Analyzing the Bundle Size
 
-2.  Navigate to the project directory:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-    bash
+### Making a Progressive Web App
 
-    Copy code
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-    `cd tile-puzzle`
+### Advanced Configuration
 
-3.  Install dependencies:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-    bash
+### Deployment
 
-    Copy code
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-    `npm install`
+### `npm run build` fails to minify
 
-4.  Start the development server:
-
-    bash
-
-    Copy code
-
-    `npm start`
-
-The app will run on `http://localhost:3000`.
-
-* * * * *
-
-Key Code Highlights
--------------------
-
-### `GameBoard.js`
-
--   **Tile Shuffling**: Randomizes the tile positions using the Fisher-Yates algorithm.
--   **State Management**: Handles the tile positions and win detection.
--   **Win Check Logic**:
-
-    jsx
-
-    Copy code
-
-    `const checkIfSolved = (tiles) => {
-      setIsSolved(tiles.every((tile, index) => tile === index + 1));
-    };`
-
-### `Tile.js`
-
--   A simple component representing individual tiles with an `onClick` event handler.
-
-* * * * *
-
-Possible Enhancements
----------------------
-
--   **Adjacency Rules**: Restrict swaps to adjacent tiles only (up, down, left, right).
--   **Empty Space**: Add an empty space for realistic sliding puzzle mechanics.
--   **Timer and Score**: Track time taken and the number of moves for added difficulty.
--   **Responsive Grid**: Dynamically adjust grid size based on screen size.
-
-* * * * *
-
-Styling
--------
-
--   **Global Styles**: Applied in `App.css` and `index.css` for consistent look and feel.
--   **Modular Styles**: Separate CSS files for `GameBoard` and `Tile` to keep styles scoped and organized.
-
-* * * * *
-
-Concepts Covered
-----------------
-
-This project reinforces:
-
-1.  **React Components**: Modular building blocks for UI.
-2.  **Props**: Passing data and event handlers between components.
-3.  **State**: Managing dynamic data within a component.
-4.  **Event Handling**: Responding to user interactions like clicks.
-5.  **CSS**: Modular and global styles for clean and responsive design.
-
-* * * * *
-
-Troubleshooting
----------------
-
-### Common Issues
-
-1.  **Tiles not swapping correctly**:
-    -   Ensure the `swapTiles` function is implemented correctly.
-2.  **Win condition not detected**:
-    -   Check the `checkIfSolved` function logic.
-
-### Debugging Tips
-
--   Use `console.log` to debug state changes and interactions.
--   Ensure all components are correctly imported and paths are accurate.
-
-* * * * *
-
-Next Steps
-----------
-
--   Experiment with grid sizes (e.g., 4x4 or 5x5).
--   Add additional gameplay features such as a shuffle button or leaderboard.
--   Explore animations for smoother tile transitions.
-
-* * * * *
-
-Acknowledgments
----------------
-
-This game was developed as an educational project to introduce students to React concepts in a fun and interactive way.
-
-Feel free to extend and adapt this project to your own needs! 🎉
-
-* * * * *
-
-License
--------
-
-This project is licensed under the **MIT License**.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
